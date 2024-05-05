@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    background-image: url('img/ciel.jpg');
+    background-size: cover; /* Pour que l'image couvre tout l'arrière-plan */
+    background-position: center; /* Pour centrer l'image */
+}
+
+.conference-image img {
+    max-width: 45%; /* Ajuste la largeur maximale de l'image */
+    height: auto; /* Garantit que l'image conserve son ratio hauteur/largeur */
+    margin-right: 20px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Style pour les champs du formulaire */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Style de la section de détails de la conférence */
+#conference-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.conference-info {
+    max-width: 400px; /* Ajuste la largeur maximale de la section de détails */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Affiche les éléments en colonne */
+    align-items: center; /* Centre les éléments horizontalement */
+    text-align: center; /* Centre le texte horizontalement */
+}
+
+.conference-info h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.conference-info h3 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 0;
+}
+
+.conference {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conference h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+.conference p {
+    font-size: 16px;
+    color: #666;
+}
+
+.conference-info p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.conference-info form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%; /* Ajuste la largeur des champs de formulaire */
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: left; /* Aligne le texte des étiquettes à gauche */
+}
+
+input[type="text"],
+input[type="email"] {
+    /*width: 100%;*/
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conférences à venir</title>
+    <link rel="stylesheet" href="confstyle.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="Logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html#accueil">Accueil</a></li>
+            <li><a href="index.html#qui-sommes-nous">Qui sommes-nous</a></li>
+            <li><a href="index.html#conferences">Conférences</a></li>
+            <li><a href="index.html#country-call">Country Call</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="conference-details">
+        <div class="container">
+            <div class="conference">
+                <div class="conference-image">
+                    <img src="img/conference.jpg" alt="Conférence">
+                </div>
+                <div class="conference-info">
+                    <h2>Détails de la conférence</h2>
+                    <div class="details">
+                        <h3>Nom de la conférence</h3>
+                        <p>Date : XX/XX/XXXX</p>
+                        <p>Lieu : Lieu de la conférence</p>
+                        <p>Sujet : Sujet de la conférence</p>
+                        <p>Heure : XX:XX - XX:XX</p>
+                    </div>
+                    <form action="inscription.php" method="post" class="registration-form">
+                        <!-- Formulaire d'inscription à la conférence -->
+                        <div class="form-group">
+                            <label for="nom">Nom :</label>
+                            <input type="text" id="nom" name="nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email :</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <input type="submit" value="S'inscrire">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</main>
+
+<!-- Section pour les conférences passées -->
+<section id="past-conferences">
+    <h2>Conférences passées</h2>
+    <ul id="past-conferences-list"></ul>
+</section>
+
+<!-- Section pour les conférences à venir -->
+<section id="upcoming-conferences">
+    <h2>Conférences à venir</h2>
+    <ul id="upcoming-conferences-list"></ul>
+</section>
+
+
+<footer>
+    <!-- Éventuellement du contenu pour le pied de page -->
+</footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
