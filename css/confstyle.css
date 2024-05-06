@@ -1,9 +1,14 @@
+/* Pour cacher des elements */
+.hide{
+    display: none;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f8f8f8;
-    background-image: url('img/ciel.jpg');
+    background-image: url('../img/ciel.jpg');
     background-size: cover; /* Pour que l'image couvre tout l'arrière-plan */
     background-position: center; /* Pour centrer l'image */
 }
@@ -44,6 +49,10 @@ nav ul li a {
     font-weight: bold;
 }
 
+li{
+    list-style: none;
+}
+
 .logo img {
     width: 100px;
 }
@@ -74,13 +83,18 @@ label {
 }
 
 /* Style de la section de détails de la conférence */
-#conference-details {
+#conference-details, #past-conferences, #upcoming-conferences {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    flex-direction: column;
+    margin: 3% 0;
 }
 
+.card{
+    margin: 4% 0;
+}
 .conference-info {
     max-width: 400px; /* Ajuste la largeur maximale de la section de détails */
     padding: 20px;
