@@ -101,7 +101,6 @@ body {
 header {
     background-color: #084a38d6;
     color: #fff;
-    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -109,20 +108,45 @@ header {
 
 nav ul {
     list-style-type: none;
-    padding: 0;
     margin: 0;
+    width: 100%;
+    justify-content: flex-end;
 }
 
 nav ul li {
     display: inline;
     margin-right: 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 1% 5px;
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+    color: #fff !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    border-radius: 5px !important;
+    padding: 1% 5px !important;
 }
+
+/* Au survol des li du menu */
+nav ul li:hover{
+    color: #084a38d6 !important;
+    background: white !important;
+}
+
+nav ul a:hover{
+    color: #084a38d6!important;
+}
+
+.navbar {
+    width: 100%;
+}
+
+.navbar .container-fluid{
+    justify-content: space-between;
+}
+
 
 /* Logo */
 .logo img {

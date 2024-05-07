@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conférences à venir</title>
-    <link rel="stylesheet" href="css/confstyle.css">
+    <link rel="stylesheet" href="./css/confstyle.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Micro+5+Charted&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sedan:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Lexend:wght@100..900&family=Micro+5+Charted&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sedan:ital@0;1&display=swap" rel="stylesheet">
@@ -12,26 +12,43 @@
 </head>
 <body>
 
-<header>
-    <div class="logo">
-        <img src="logo.png" alt="Logo">
-    </div>
-    <nav>
-        <ul>
-            <li><a href="index.html#accueil">Accueil</a></li>
-            <li><a href="index.html#qui-sommes-nous">Qui sommes-nous</a></li>
-            <li><a href="index.html#conferences">Conférences</a></li>
-            <li><a href="index.html#country-call">Country Call</a></li>
-        </ul>
-    </nav>
-</header>
+    <header class=" sticky-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <div class="navbar-brand logo">
+                <img src="./img/rpr.png" alt="Logo">
+              </div>
+              <button class="navbar-toggler ms-lg-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon bg-dark"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ps-auto">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./index.html#accueil">Accueil</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./index.html#qui-sommes-nous">Qui sommes-nous ?</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./conferences.html">Conférences</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./index.html#country-call">Country Call</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
 
 <main>
     <!-- Section pour les conférences à venir -->
     <section id="upcoming-conferences">
         <div class="container">
             <h2>Conférences à venir</h2>
-            
+            <div class="row">
+
+            </div>
         </div>
     </section>
     
@@ -39,42 +56,38 @@
     <section id="past-conferences">
         <div class="container">
             <h2>Conférences passées</h2>
-        </div>
-    </section>
-    
-    <!-- <section id="conference-details">
-        <div class="container">
-            <div class="conference">
-                <div class="conference-image">
-                    <img src="img/conference.jpg" alt="Conférence">
-                </div>
-                <div class="conference-info">
-                    <h2>Détails de la conférence</h2>
-                    <div class="details">
-                        <h3>Nom de la conférence</h3>
-                        <p>Date : XX/XX/XXXX</p>
-                        <p>Lieu : Lieu de la conférence</p>
-                        <p>Sujet : Sujet de la conférence</p>
-                        <p>Heure : XX:XX - XX:XX</p>
-                    </div>
-                </div>
+            <div class="row">
             </div>
         </div>
-    </section> -->
+    </section>
 
-    <form action="inscription.php" method="post" class="registration-form hide">
-        <!-- Formulaire d'inscription à la conférence -->
-        <div class="form-group">
-            <label for="nom">Nom :</label>
-            <input type="text" id="nom" name="nom" required>
-        </div>
-        <div class="form-group">
-            <label for="email">Email :</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        <input type="submit" value="S'inscrire">
-    </form>
-    
+    <dialog>
+        <form action="inscription.php" method="post" class="registration-form">
+            <!-- Formulaire d'inscription à la conférence -->
+            <a href="./conferences.html" class="del btn"><i class="bi bi-x-square"></i></a>
+
+            <div class="form-group first">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+            <div class="form-group">
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" required>
+            </div>
+            <div class="form-group">
+                <label for="tel">Télephone :</label>
+                <input type="tel" id="tel" name="tel" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="row">
+                <input type="submit" value="S'inscrire" class="btn-success mx-auto col-4">
+            </div>
+        </form>
+    </dialog>
+
 </main>
 
 
@@ -84,6 +97,7 @@
 </footer>
 
 
-    <script src="js/script.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
