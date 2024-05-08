@@ -46,6 +46,10 @@ nav ul li a {
     border-radius: 5px !important;
     padding: 1% 5px !important;
 }
+a{
+    color: black;
+    text-decoration: none;
+}
 
 /* Au survol des li du menu */
 nav ul li:hover{

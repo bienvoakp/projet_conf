@@ -67,15 +67,15 @@
 
     <dialog id="myDialog">
         <div class="dialog-header">
-        <a href="#" class="close-btn">&times;</a>
+        <a href="conferences.html" class="close-btn">&times;</a>
         </div>
         <form action="inscription.php" method="post" class="registration-form">
             <!-- Formulaire d'inscription à la conférence -->
-            <a href="./conferences.html" class="del btn"><i class="bi bi-x-square"></i></a>
+            <a href="conferences.html" class="del btn"><i class="bi bi-x-square"></i></a>
 
             <div class="form-group first">
                 <label for="nom">Nom :</label>
-                <input type="text" id="nom" name="nom" required class="form-control" placeholder="Entrez votre nom">
+                <input type="text" id="nom" name="nom" class="form-control" placeholder="Entrez votre nom" required>
             </div>
             <div class="form-group">
                 <label for="prenom">Prénom :</label>
@@ -96,7 +96,7 @@
             <div class="row">
               <button type="submit" class="btn btn-outline-success mx-auto col-4" data-bs-toggle="modal" data-bs-target="#inscrire">
                 S'inscrire 
-             </button>
+              </button>
             </div>
             
             <!--je vais tenter de créer un fond noir-->
