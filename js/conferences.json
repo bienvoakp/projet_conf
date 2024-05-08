@@ -1,0 +1,46 @@
+[
+    {
+        "id": 0,
+        "date": "2024-03-15",
+        "urlImage": "img/conference.jpg" ,
+        "subject": "Titre de la conférence",
+        "location": "Lieu de la conférence",
+        "time": "09:00:00",
+        "endTime" : "11:00:00",
+        "details": "Description détaillée de la conférence",
+        "status": "passed"
+    },
+    {
+        "id": 1,
+        "date": "2024-06-20",
+        "urlImage": "img/conference.jpg" ,
+        "subject": "Titre de la conférence",
+        "location": "Lieu de la conférence",
+        "time": "10:30:00",
+        "endTime" : "12:00:00",
+        "details": "Description détaillée de la conférence",
+        "status": "upcoming"
+    },
+    {
+        "id": 2,
+        "date": "2024-04-15",
+        "urlImage": "img/conference.jpg" ,
+        "subject": "Titre de la conférence",
+        "location": "Lieu de la conférence",
+        "time": "09:00:00",
+        "endTime" : "11:00:00",
+        "details": "Description détaillée de la conférence",
+        "status": "passed"
+    },
+    {
+        "id": 3,
+        "date": "2024-12-02",
+        "urlImage": "img/conference.jpg" ,
+        "subject": "Titre de la conférence",
+        "location": "Lieu de la conférence",
+        "time": "09:00:00",
+        "endTime" : "11:00:00",
+        "details": "Description détaillée de la conférence",
+        "status": "upcoming"
+    }
+]
