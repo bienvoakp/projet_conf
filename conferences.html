@@ -147,8 +147,38 @@
 
 
 
-<footer>
+
+<footer class="bg-tertiary text-white p-3">
     <!-- Éventuellement du contenu pour le pied de page -->
+    <!-- ICI : pied de page -->
+
+    <!-- NEWSLETTER -->
+    <div id="newsletter">
+      <p>
+        Soyez au courant les nouvelles et les notifications sur nos événements! <br>
+        Inscrivez-vous à notre newsletter.
+      </p>
+      <form action="newsletter.php" method="post">
+        <input type="email" name="news" id="news" placeholder="exemple@gmail.com" class="p-1 rounded-2" required>
+        <button class="btn btn-light" type="submit">S'abonner</button>
+      </form>
+    </div>
+
+    <!-- Les liens -->
+    <div class="row py-5" id="contact">
+      <h3>Nos contacts</h3>
+      <p>Tel: +229 XX-XX-XX-XX/ +229 XX-XX-XX-XX</p>
+      <p>Email: country-call@gmail.com</p>
+      <ul>
+        <li><a href="https://facebook.com"><i class="bi bi-facebook"></i></a></li>
+        <li><a href="https://wa.me"><i class="bi bi-whatsapp"></i></a></li>
+        <li><a href="https://twitter.com"><i class="bi bi-twitter-x"></i></a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p>&copy; Country Call &copy Tous droits reservés</p>
+    </div>
 </footer>
 
 
