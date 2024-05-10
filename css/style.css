@@ -125,7 +125,11 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    
+    /*C'est ici que les changements ont commencé*/
+    align-items: center;
+    justify-content: center;
+    height: 100vh;   
+
     /* background-color: #72EE9A; */
    /* background-image: linear-gradient(0deg, rgba(251,238,25, 0.5) 0%, rgba(251,238,25, 0.5) 3%,transparent 3%, transparent 27%,rgba(43, 209, 74,0.5) 27%, rgba(43, 209, 74,0.5) 41%,rgba(21, 162, 91,0.5) 41%, rgba(21, 162, 91,0.5) 100%),linear-gradient(90deg, rgb(94,130,7) 0%, rgb(94,130,7) 37%,rgb(14, 146, 97) 37%, rgb(14, 146, 97) 56%,transparent 56%, transparent 61%,rgb(21, 162, 91) 61%, rgb(21, 162, 91) 100%),linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255)); */
    /* background-image: repeating-linear-gradient(135deg, rgba(0,0,0,0.03) 0px, rgba(0,0,0,0.03) 2px,transparent 2px, transparent 4px),linear-gradient(45deg, rgb(13,75,166),rgb(130,238,108)); */
@@ -139,6 +143,74 @@ body {
     background-size: cover; /* Pour que l'image couvre tout l'arrière-plan */
     background-position: center; /* Pour centrer l'image */
 }
+
+/*C'est ici que les changements ont commencé*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*C'est ici que les changements ont commencé*/
+
+
+.card{
+    background: ;
+    width: 350px;
+    height: 400px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.card img{
+    width: 40%;
+    border-radius: 50%;
+    transition: all .3s;
+}
+
+.informations{
+    text-align: center;
+    margin-top: 100px;
+
+}
+
+.card h1{
+    margin-top: 30px;
+}
+
+.card h3{
+    font-size: 1.3rem;
+}
+
+.card h1, .card h3{
+    transition: all .3s;
+}
+
+.card:hover img, .card:hover h1, .card:hover h3{
+    transform: translateY(-50px);
+}
+
+.icon{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.icon a i{
+    margin: 10px;
+    color: #c32aa3;
+    transition: all .6s;
+    transform: translateY(100px);
+}
+
+.card:hover .icon a i{
+    transform: translateY(15px);
+}
+
 
 /* Barre de navigation */
 header {
@@ -410,3 +482,5 @@ footer a{
     text-align: justify;
     line-height: 1.6;
  }
+
+ 
