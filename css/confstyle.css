@@ -1,101 +1,12 @@
-/* Option 2: Import via CSS */
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 
 /* Pour cacher des elements */
 .hide{
     display: none;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
-    background-image: url('../img/ciel.jpg');
-    background-size: cover; /* Pour que l'image couvre tout l'arrière-plan */
-    background-position: center; /* Pour centrer l'image */
+h1{
+    animation: slideIn .6s ease;
 }
-
-
-
-/* Barre de navigation */
-header {
-    background-color: #084a38d6;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    width: 100%;
-    justify-content: flex-end;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-    border: 1px solid white;
-    border-radius: 5px;
-    padding: 1% 5px;
-}
-
-nav ul li a {
-    color: #fff !important;
-    text-decoration: none !important;
-    font-weight: bold !important;
-    border-radius: 5px !important;
-    padding: 1% 5px !important;
-}
-a{
-    color: black;
-    text-decoration: none;
-}
-
-/* Au survol des li du menu */
-nav ul li:hover{
-    color: #084a38d6 !important;
-    background: white !important;
-}
-
-nav ul a:hover{
-    color: #084a38d6!important;
-}
-
-.navbar {
-    width: 100%;
-}
-
-.navbar .container-fluid{
-    justify-content: space-between;
-}
-
-li{
-    list-style: none;
-}
-
-/* Logo */
-.logo img {
-    width: 100px;
-}
-
-.container{
-    max-width: 70%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    font-size: 24px;
-    color: #333;
-    margin: 4% 0 !important;
-}
-
 
 /* Style de la section de détails de la conférence */
 #past-conferences, #upcoming-conferences {
@@ -107,14 +18,14 @@ h2 {
     margin: 3% 0;
 }
 
-.conference-image img {
+.confe-image img {
     width: 80%; /* Ajuste la largeur maximale de l'image */
     height: auto; /* Garantit que l'image conserve son ratio hauteur/largeur */
     border-radius: 5px;
     margin-bottom: 15px;
 }
 
-.conference {
+.confe {
     background-color: #cae9e1d6;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(44, 43, 43, 0.1);
@@ -129,7 +40,7 @@ h2 {
     gap: 4%;
 }
 
-.conference-info {
+.confe-info {
     width: 100%; /* Ajuste la largeur maximale de la section de détails */
     display: flex;
     flex-direction: column; /* Affiche les éléments en colonne */
@@ -137,21 +48,19 @@ h2 {
     text-align: center; /* Centre le texte horizontalement */
 }
 
-.conference-info h3 {
+.confe-info h3 {
     font-size: 24px;
     color: #333;
     margin-bottom: 15px;
 }
 
-.conference-info h4 {
+.confe-info h4 {
     font-size: 20px;
     color: #333;
     margin-top: 0;
 }
 
-
-
-.conference-info p {
+.confe-info p {
     font-size: 16px;
     color: #666;
     margin-bottom: 10px;
@@ -215,6 +124,11 @@ input[type="submit"] {
     transition: background-color 0.3s ease;
 }
 
+
+#myDialog{
+    margin: auto;
+}
+
 .dialog-header {
     display: flex;
     justify-content: flex-end;
@@ -223,28 +137,4 @@ input[type="submit"] {
 
 .close-btn {
     cursor: pointer;
-}
-
-/* Pied de page */
-footer {
-    background-color: #837b7b;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-}
-
-footer a{
-    text-decoration: none;
-    color: rgb(64, 168, 107);
-}
-
-#contact ul{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5%;
-}
-
-#contact i{
-    scale: 1.4;
 }

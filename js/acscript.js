@@ -48,15 +48,4 @@ fetch('./js/conferences.json')
     upcomingConferences.forEach(conference => {
         displayConferenceInfo(conference, upcomingConferencesCard);
     });
-
-    const conferenceCard = document.querySelectorAll('.conference');
-    conferenceCard.forEach(conf => {
-        conf.onmouseover = ()=>{
-            conf.children[1].classList.add('z-2');
-        }
-
-        conf.onmouseout = ()=>{
-            conf.children[1].classList.remove('z-2');
-        }
-    });
 })

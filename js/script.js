@@ -7,16 +7,16 @@ function sortConferencesByDate(conferences) {
 function displayConferenceInfo(conference, list) {
     /* Pour chaque conference */
     const card = document.createElement('div');
-    card.classList.add('conference');
+    card.classList.add('confe');
     card.classList.add('col-8'); //class pour system grid
     card.classList.add('col-lg-4'); //class pour grid
 
     //contenu
     card.innerHTML = `
-    <div class="conference-image">
+    <div class="confe-image">
         <img src="${conference.urlImage}" alt="Conférence">
     </div>
-    <div class="conference-info">
+    <div class="confe-info">
         <h3 class="text-success">${conference.details}</h3>
         <div class="details">
             <h4>${conference.subject}</h4>
@@ -101,13 +101,14 @@ fetch('./js/conferences.json')
 
                 //dialog opening
                 dialog.showModal();
+
             }
                 
         });
         
         //submit
-        document.getElementById('inscrire').onclick = ()=>{
-            dialog.close();
+        document.getElementById('valider').onsubmit = ()=>{
+            if(confirm("Avez-vous entré les informations sans erreurs ?")) dialog.close();
         }
 
         //fermer formulaire
