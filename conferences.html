@@ -54,10 +54,10 @@
           <p class="fs-4">Prenez le rendez-vous ici et maintenant pour votre réussite!</p>
         </div>
           <div class="container">
-              <h2 class="color-green">Conférences à venir</h2>
-              <div class="row">
+            <h2 class="color-green">Conférences à venir</h2>
+            <div class="row">
 
-              </div>
+            </div>
           </div>
       </section>
       
@@ -70,18 +70,25 @@
           </div>
       </section>
 
-      <dialog id="myDialog">
+      <dialog id="myDialog" class="w-75 w-lg-50">
         <div class="dialog-header">
-          <a href="conferences.html" class="close-btn">&times;</a>
+          <div class="row logos">
+            <div class="col-1">
+              <img src="./img/rpr.png" alt="logo" class="logo">
+            </div>
+            <div class="col-1">
+              <a href="conferences.html" class="close-btn">&times;</a>
+            </div>
+          </div>
           </div>
           <form action="inscription.php" method="post" class="registration-form">
               <!-- Formulaire d'inscription à la conférence -->
-              <a href="conferences.html" class="del btn"><i class="bi bi-x-square"></i></a>
 
               <div class="form-group first">
-                  <label for="nom">Nom :</label>
-                  <input type="text" id="nom" name="nom" class="form-control" placeholder="Entrez votre nom" required>
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" class="form-control" placeholder="Entrez votre nom" required>
               </div>
+
               <div class="form-group">
                   <label for="prenom">Prénom :</label>
                   <input type="text" id="prenom" name="prenom" required class="form-control" placeholder="Entrez votre prénom">
@@ -90,8 +97,9 @@
                   <label for="tel">Télephone :</label>
                   <input type="tel" id="tel" name="tel" required class="form-control" placeholder="Entrez votre numéro de téléphone">
               </div>
+              
               <div class="form-group" style="flex-direction: column;">
-                <div class="d-flex" style="justify-content: space-between;">
+                <div class=" d-flex" style="justify-content: space-between;">
                  <label for="email">Email :</label>
                   <input type="email" id="email" name="email" required class="Entrez votre mail">
                 </div>

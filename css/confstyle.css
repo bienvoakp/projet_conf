@@ -19,25 +19,25 @@ h1{
 }
 
 .confe-image img {
-    width: 80%; /* Ajuste la largeur maximale de l'image */
+    width: 100%; /* Ajuste la largeur maximale de l'image */
     height: auto; /* Garantit que l'image conserve son ratio hauteur/largeur */
     border-radius: 5px;
     margin-bottom: 15px;
 }
 
 .confe {
-    background-color: #cae9e1d6;
+    background-color: rgba(203, 237, 228, 0.839);
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(44, 43, 43, 0.1);
-    margin: 4% 1%;
-    padding: 2%;
     align-items: center;
-    
+    margin: 5% 0;
 }
 
 .row{
     justify-content: center;
-    gap: 4%;
+    align-items: center;
+    gap: 10%;
+    --bs-gutter-x:0 !important;
 }
 
 .confe-info {
@@ -84,11 +84,19 @@ form {
     border-radius: 15px;
 }
 
-form .del{
-    position: relative;
-    left: 93%;
-    bottom: 15%;
-    border: none !important;
+
+.logos{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dialog-header .row{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dialog-header img{
+    width: 100%;
 }
 
 .form-group {
@@ -127,14 +135,18 @@ input[type="submit"] {
 
 #myDialog{
     margin: auto;
+    border-radius: 15px;
 }
 
 .dialog-header {
+    background: rgb(33, 84, 54);
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     padding: 10px;
 }
 
 .close-btn {
     cursor: pointer;
+    text-decoration: none;
+    color: black;
 }

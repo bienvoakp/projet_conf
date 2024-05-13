@@ -70,7 +70,7 @@ fetch('./js/conferences.json')
     
     //Info supplementaires au formulaire
     const form = document.querySelector('.registration-form');
-    const referenceElement = form.children[1];
+    const referenceElement = form.children[0];
     console.log(referenceElement);
 
     const btnInscrires = document.querySelectorAll('.badge');

@@ -461,4 +461,20 @@ footer a{
     line-height: 1.6;
  }
 
- 
+ /*petits ecrans */
+ @media (max-width: 700px) {
+    /* accueil */
+    #ac{
+        background: rgb(64, 168, 107);
+        background: -moz-linear-gradient(180deg, rgb(64, 168, 107) 80%, white 20%);
+        background: -webkit-linear-gradient(180deg, rgb(64, 168, 107) 80%, #ffffff 20%);
+        background: linear-gradient(180deg, rgb(64, 168, 107) 80%, white 20%);
+    }
+
+    #qui{
+        background: rgb(64, 168, 107);
+        background: -moz-linear-gradient(0deg, rgb(64, 168, 107) 75%, white 25%);
+        background: -webkit-linear-gradient(0deg, rgb(64, 168, 107) 75%, white 25%);
+        background: linear-gradient(0deg, rgb(64, 168, 107) 75%, white 25%);
+    }
+ }
