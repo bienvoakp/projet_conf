@@ -116,7 +116,7 @@ label {
 }
 
 input[type="text"],
-input[type="email"],
+input[tupe="email"],
 input[type="tel"], textarea {
     width: 60% !important;
     padding: 5px;

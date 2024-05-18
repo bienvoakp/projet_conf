@@ -12,15 +12,14 @@
         $tel = htmlspecialchars($_POST['tel']);
         $email = htmlspecialchars($_POST['email']);
 
-        echo 'Bonjour ' . $nom . ' ' . $prenom . ' ! Votre inscription a été enregistrée avec succès. Merci ! <br><br>';
-
+        
     }
 
     //CONNEXION A LA BASE DE DONNEES
 
     try{
         $bdd= new PDO('mysql:host=localhost; dbname=countrycall;charset = utf-8','root','');
-
+        $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         /*echo "Connexion réussie à la base de données !";*/
 
     } catch(Exception $e) {
@@ -37,18 +36,40 @@
         $email=$_POST['email'];
     }
 
-    $requete=$bdd->prepare('INSERT INTO inscription_conferences(nom, prenom, contacts, email) VALUES (?, ?, ?, ?)') 
-    or die(print_r($bdd->errorInfo()));
-    $requete->execute(array($nom, $prenom, $tel, $email));
+    $requete=$bdd->prepare('INSERT INTO inscription_conferences(nom, prenom, contacts, email) VALUES (?, ?, ?, ?)') ;
+    // or die(print_r($bdd->errorInfo()));
+    try{
+        $requete->execute(array($nom, $prenom, $tel, $email));
+    } catch(Exception $e){
+
+        //Envoi d4un post request a conference.html
+        // Recuperer l'erreur de la requete
+        $errorInfo = $requete->errorInfo();
+        $url = "./conferences.html"; //destination
+        $data = array(
+            "Error Code" => $errorInfo[0], //le code de l'erreur
+            "Erreur Message" => $errorInfo[2],
+        );
+
+        $ch = curl_init($url); // c'est la methode aui permet de faire la requete
+        curl_setopt($ch, CURLOPT_POST, true); // on precise que c'est post
+        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); //retourne la reponse en chaine de caract7re
+
+        $bdd = null;
+        header('Location: conferencesMain.php');
+        exit;
+    }
     
     
     
     
     //On peut lire les données contenues dans notre base grâce à une requête php
+    //$requete= $bdd->query('SELECT * FROM inscription_conferences') ;
 
-    $requete= $bdd->query('SELECT * FROM inscription_conferences') ;
-
-
+    echo 'Bonjour ' . $nom . ' ' . $prenom . ' ! Votre inscription a été enregistrée avec succès. Merci ! <br><br>';
+    //header('Location: conferences.html');
+    exit;
        /* while($donnees=$requete->fetch()){
 
            echo '<br><br>' ;

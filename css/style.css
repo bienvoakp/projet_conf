@@ -308,20 +308,17 @@ nav ul a:hover{
 footer {
     background-color: rgba(33, 84, 54, .8);
     color: #fff;
-    justify-content: space-around;
-    text-align: center;
 }
 
 /*C'est ici que les changements ont commencé*/
 
 
 .card{
-    width: 350px;
-    height: 400px;
+    width: 100%;
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    padding: 2%;
+    padding: 5%;
 
 }
 
@@ -333,7 +330,7 @@ footer {
 
 .informations{
     text-align: center;
-    margin-top: 100px;
+    margin-top: 1rem;
 }
 
 .card h1{
@@ -461,20 +458,39 @@ footer a{
     line-height: 1.6;
  }
 
- /*petits ecrans */
- @media (max-width: 700px) {
+
+/* Moyens ecrans */
+@media (min-width:701px) and (max-width: 992px) {
     /* accueil */
     #ac{
         background: rgb(64, 168, 107);
-        background: -moz-linear-gradient(180deg, rgb(64, 168, 107) 80%, white 20%);
-        background: -webkit-linear-gradient(180deg, rgb(64, 168, 107) 80%, #ffffff 20%);
-        background: linear-gradient(180deg, rgb(64, 168, 107) 80%, white 20%);
+        background: -moz-linear-gradient(96deg, rgb(64, 168, 107) 50%, white 50%);
+        background: -webkit-linear-gradient(96deg, rgb(64, 168, 107) 50%, #ffffff 50%);
+        background: linear-gradient(96deg, rgb(64, 168, 107) 50%, white 20%);
     }
 
     #qui{
         background: rgb(64, 168, 107);
-        background: -moz-linear-gradient(0deg, rgb(64, 168, 107) 75%, white 25%);
-        background: -webkit-linear-gradient(0deg, rgb(64, 168, 107) 75%, white 25%);
-        background: linear-gradient(0deg, rgb(64, 168, 107) 75%, white 25%);
+        background: -moz-linear-gradient(84deg, white 50%,  rgb(64, 168, 107) 50%);
+        background: -webkit-linear-gradient(84deg, white 50% , rgb(64, 168, 107) 50%);
+        background: linear-gradient(84deg, white 50% , rgb(64, 168, 107) 50%);
+    }
+ }
+
+ /*petits ecrans */
+ @media (max-width: 768px) {
+    /* accueil */
+    #ac{
+        background: rgb(64, 168, 107);
+        background: -moz-linear-gradient(180deg, rgb(64, 168, 107) 85%, white 20%);
+        background: -webkit-linear-gradient(180deg, rgb(64, 168, 107) 85%, #ffffff 20%);
+        background: linear-gradient(180deg, rgb(64, 168, 107) 85%, white 20%);
+    }
+
+    #qui{
+        background: rgb(64, 168, 107);
+        background: -moz-linear-gradient(0deg, rgb(64, 168, 107) 85%, white 25%);
+        background: -webkit-linear-gradient(0deg, rgb(64, 168, 107) 85%, white 25%);
+        background: linear-gradient(0deg, rgb(64, 168, 107) 85%, white 25%);
     }
  }
