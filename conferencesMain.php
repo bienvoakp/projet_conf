@@ -251,7 +251,7 @@
       if (isset($_POST['nom']) && isset($_POST['prenom']) && isset($_POST['tel']) && isset($_POST['email'])){
 ?>
   <script>
-    const phpData = `<?php echo $jsonData; ?>`;
+    const phpData = <?php echo $jsonData; ?>;
     if (!phpData.message) {
       alert("Vous avez bien été enregistré! Merci d'avoir pris le rendez-vous");
     }else{

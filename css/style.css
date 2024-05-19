@@ -308,6 +308,7 @@ nav ul a:hover{
 footer {
     background-color: rgba(33, 84, 54, .8);
     color: #fff;
+    padding: 5% 0;
 }
 
 /*C'est ici que les changements ont commencé*/
@@ -475,6 +476,8 @@ footer a{
         background: -webkit-linear-gradient(84deg, white 50% , rgb(64, 168, 107) 50%);
         background: linear-gradient(84deg, white 50% , rgb(64, 168, 107) 50%);
     }
+
+    
  }
 
  /*petits ecrans */
@@ -492,5 +495,12 @@ footer a{
         background: -moz-linear-gradient(0deg, rgb(64, 168, 107) 85%, white 25%);
         background: -webkit-linear-gradient(0deg, rgb(64, 168, 107) 85%, white 25%);
         background: linear-gradient(0deg, rgb(64, 168, 107) 85%, white 25%);
+    }
+    .conference-info{
+        position: static;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        background: rgb(64, 168, 107);
     }
  }
