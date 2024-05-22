@@ -17,9 +17,9 @@ function displayConferenceInfo(conference, list) {
         <img src="${conference.urlImage}" alt="Conférence">
     </div>
     <div class="confe-info">
-        <h3 class="text-success">${conference.details}</h3>
+        <h3 class="text-success">${conference.subject}</h3>
         <div class="details">
-            <h4>${conference.subject}</h4>
+            <h4>${conference.details}</h4>
             <p>Date : ${conference.date}</p>
             <p>Lieu : ${conference.location}</p>
             <p>Sujet : Sujet de la conférence</p>
@@ -86,14 +86,10 @@ fetch('./js/conferences.json')
                 const titreConference = document.createElement('div');
                 titreConference.classList.add('row');
                 titreConference.innerHTML= `
-                <fieldset disabled="disabled">
+                <fieldset>
                     <div class="form-group">
                         <label for="titre">Titre :</label>
-                        <textarea class="form-control" id="titre" name="titre">${conferences[idElemt].subject}</textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="description">Description :</label>
-                        <textarea class="form-control" id="description" name="description">${conferences[idElemt].details}</textarea>
+                        <textarea class="form-control" id="titre" name="titre" readonly>${conferences[idElemt].subject}</textarea>
                     </div>
                 </fieldset>
                     `
