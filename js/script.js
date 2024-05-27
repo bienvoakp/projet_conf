@@ -68,15 +68,21 @@ fetch('./js/conferences.json')
         displayConferenceInfo(conference, pastConferencesCard);
     });
     
+// formulaire ic!!!
     //Info supplementaires au formulaire
-    const form = document.querySelector('.registration-form');
+    // on prend le formulaire
+    const form = document.querySelector('#registration-form');
+    // on cherche son enfant ou on veut injecter 
     const referenceElement = form.children[0];
     console.log(referenceElement);
 
+    // boutouns qui affiche le formulaire
     const btnInscrires = document.querySelectorAll('.badge');
     //dialog
     const dialog = document.querySelector('dialog');
 
+
+    //Partie pour inserer le titre correspondant a l'evenement sur lequel l'utilisateur a cliqué
     btnInscrires.forEach(btn => {
             btn.onclick= (e)=>{
                 //id de la conférence selectionée
@@ -101,20 +107,48 @@ fetch('./js/conferences.json')
             }
                 
         });
+    // Fin de Partie pour inserer le titre correspondant a l'evenement sur lequel l'utilisateur a cliqué
         
-        //submit
-        document.getElementById('valider').onsubmit = ()=>{
-            if(confirm("Avez-vous entré les informations sans erreurs ?")) dialog.close();
-        }
 
-        //fermer formulaire
-        document.querySelector('del').onclick = ()=>{
-            dialog.close();
-        }
+
+          
+        // document.getElementById('valider').onsubmit = ()=>{
+        //     if(confirm("Avez-vous entré les informations sans erreurs ?")) dialog.close();
+        // }
+
+        // //fermer formulaire
+        // document.querySelector('del').onclick = ()=>{
+        //     dialog.close();
+        // }
+
+        //FORM SUBMISSION
+        // a la soumission
+        form.addEventListener('submit', function(event) {
+            
+            //s'il ya un soucis de validation pour un champ
+            if (!form.checkValidity()) {
+                event.preventDefault(); // Prevent default form submission
+              return;
+            }
+          
+            // Confirmation popup
+            const confirmation = confirm("Avez-vous entré les informations sans erreurs ?");
+            if (confirmation) {
+              form.submit();
+              //   const formData = new FormData(form); // Get form data
+              
+              //   // Send AJAX request to backend
+              //   fetch('conferencesMain.php', {
+            //     method: 'POST',
+            //     body: formData
+            //   });
+
+              dialog.close();
+            }
+          });
 
     })
 
     .catch(error => {
         console.error('Erreur lors du chargement des données JSON :', error);
     });
-
