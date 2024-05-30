@@ -81,7 +81,7 @@
             </div>
           </div>
           </div>
-          <form action="conferencesMain.php" method="post" id="registration-form" class="was-validated">
+          <form action="conferencesMain.php" method="post" id="registration-form" class="was-validated py-2">
               <!-- Formulaire d'inscription à la conférence -->
               <!-- nom -->
               <div class="form-group first">
@@ -114,34 +114,6 @@
                 </button>
               </div>
 
-                <!-- je vais tenter de créer un fond noir
-                <div class="modal fade" id="inscrire">
-                  !--la boite de dialogue--
-                  <div class="modal-dialog">
-                    !--le contenu--
-                    <div class="modal-content">
-                      !--je veux placer le header de ma modale--
-                      <div class="modal-header">
-                        <h5 class="modal-title bg-danger text-dark">Attention !</h5>
-                        <button class="btn-close" type="button" data-bs-dismiss="modal">
-                          <span class="visually-hidden">Fermer</span>
-
-                        </button>
-                        </div>
-                      --son body--
-                      <div class="modal-body">
-                        <p class="m-0">Avez-vous entré les informations sans erreurs ?</p>
-                      </div>
-                      --son footer--
-
-                      <div class="modal-footer">
-                        <input type="submit" class="btn-outline-success" type="button" data-bs-dismiss="modal" name="submit">
-                        <button class="btn-outline-danger" type="button" data-bs-dismiss="modal">Non</button>
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
-
             </form>
       </dialog>
 
@@ -149,17 +121,17 @@
 
   <footer>
     <div class="container">
-      <div class="row">
+      <div class="row gap-0">
 
-        <div class="col-8 col-lg-6">
+        <div class="col-8 col-lg-6 px-5">
           <!-- Formulaire -->
-          <div class="bg-success text-white mx-auto p-4 my-4">
-            <h2>Remplissez ce formulaire pour nous contacter</h2>
-            <form>
+          <div class="bg-success text-white mx-auto p-4 my-4 mx-5">
+            <h2 class="mt-4">Remplissez ce formulaire pour nous contacter</h2>
+            <form action="" method="post">
               <p>
                 <label for="email">Adresse mail</label>
                 <input type="email" class="form-control" placeholder="Entrez votre mail" name="email" id="email">
-               <!--<small class="text-muted text-dark">Nous ne partagerons pas votre adresse mail.</small>-->
+               <!--<small class="text-muted text-dark">Nous ne partagerons pas votre adresse mail.</small>--> 
               </p>
               <p>
                 <label for="message">Message</label>
@@ -170,12 +142,12 @@
           </div>
         </div>
 
-        <div class="col-8 col-lg-6">
+        <div class="col-8 col-lg-6"> 
           <div class="card bg-success" id="contact">
             <!--Informations -->
             <div class="Informations">
               <!--Photo-->
-              <img src="img/rpr.png" alt="Notre logo">
+              <img src="img/logo_cc_vf.png" alt="Notre logo">
               <!--Prénom Nom-->
               <h1 class="text-white">Country Call</h1>
               <h3 class="text-white">Creuset d'échanges et de partages d'expériences</h3>
@@ -190,17 +162,17 @@
               <a href="#"><i class="fa-brands fa-facebook fa-2x color-green"></i></a>
               <a href="#"><i class="fa-brands fa-twitter fa-2x color-green"></i></a>
             </div>
-
+          
           </div>
-
+          
         </div>
 
       </div>
-  </div>
+    </div>
 
-  <div class="row">
+    <div class="row">
       <p class="text-center">&copy; Country Call &copy Tous droits reservés</p>
-  </div>
+    </div>
   </footer>
 
   <script src="./js/script.js"></script>

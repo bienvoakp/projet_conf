@@ -99,8 +99,13 @@ li{
  
 
  h2, h4{
+
     font-family: Plush-Trial;
  }
+
+h2{
+    font-weight: bolder;
+}
 
  p{
     font-family: PP Pangaia;
@@ -303,6 +308,22 @@ nav ul a:hover{
     margin-bottom: 20px;
 }
 
+/* Nous rejoindre */
+.present{
+    border: 1px solid rgb(33, 84, 54);
+    padding: 3%;
+    text-align: center;
+    margin: 7% 0;
+}
+
+.present:hover{
+    box-shadow: 0 0 10px rgb(104, 207, 147);
+}
+
+.dg{
+    scale: 1.3;
+}
+
 
 /* Pied de page */
 footer {
@@ -476,7 +497,6 @@ footer a{
         background: -webkit-linear-gradient(84deg, white 50% , rgb(64, 168, 107) 50%);
         background: linear-gradient(84deg, white 50% , rgb(64, 168, 107) 50%);
     }
-
     
  }
 
@@ -502,5 +522,9 @@ footer a{
         height: 100%;
         width: 100%;
         background: rgb(64, 168, 107);
+    }
+
+    .dg{
+        scale: 1;
     }
  }
